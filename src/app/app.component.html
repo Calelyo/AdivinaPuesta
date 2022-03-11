@@ -1,48 +1,7 @@
-<div class="appCSS">
-
-  
-  <div>
-    <h1>AdivinApuesta</h1>
-  </div>
-
-  <div>
-    <button (click)="activar()">Activar</button>
-    <button (click)="desactivar()">Desactivar</button>
-    <br>
-
-    <span>Activar cuesta 200 de oro y genera un nuevo numero oculto.</span>
-    <br>
-
-    <span>Estado: {{ activado }} </span>
-  </div>
-
-  <div>
-    Oculto: <span *ngIf="this.activado == false"> {{ oculto }} </span>
-  </div>
-
-  <div>
-    <!-- Codigo de flecha arriba -->
-    <button (click)="botonArriba()"> &#x25B2; </button>
-    <br>
-
-    <span>{{ aleatorio }}</span>
-    <br>
-    
-    <!-- Codigo de flecha abajo -->
-    <button (click)="botonAbajo()"> &#x25BC; </button>
-    <br>
-
-    <button (click)="elegir()">Elegir</button>
-  </div>
-
-  <div>
-    <span>Oro: {{ oro }}</span>
-    <br>
-    <span>Deuda: {{ deuda }} </span>
-    <br>
-    <button (click)="pedirPrestamo()">Pedir prestamo (200)</button>
-    <button (click)="pagarDeuda()" >Pagar deuda</button>
-  </div>
-
-
-</div>
+<app-apuesta [oro]="oro" (outputMio)="procesarMiOutput($event)"></app-apuesta>
+<!-- <app-apuesta></app-apuesta> -->
+<div> {{ oro }} </div>
+<div>Coso = {{ coso }}</div>
+<button (click)="comprar()">Comprar</button>
+<button (click)="sumarCoso()">Sumar Coso</button>
+<button (click)="restarCoso()">Restar Coso</button>

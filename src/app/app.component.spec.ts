@@ -1,31 +1,25 @@
-import { TestBed } from '@angular/core/testing';
-import { AppComponent } from './app.component';
+// import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
-      ],
-    }).compileComponents();
-  });
+// import { ApuestaComponent } from './apuesta.component';
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
+// describe('ApuestaComponent', () => {
+//   let component: ApuestaComponent;
+//   let fixture: ComponentFixture<ApuestaComponent>;
 
-  it(`should have as title 'adivinapuesta'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('adivinapuesta');
-  });
+//   beforeEach(async () => {
+//     await TestBed.configureTestingModule({
+//       declarations: [ ApuestaComponent ]
+//     })
+//     .compileComponents();
+//   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('adivinapuesta app is running!');
-  });
-});
+//   beforeEach(() => {
+//     fixture = TestBed.createComponent(ApuestaComponent);
+//     component = fixture.componentInstance;
+//     fixture.detectChanges();
+//   });
+
+//   it('should create', () => {
+//     expect(component).toBeTruthy();
+//   });
+// });
