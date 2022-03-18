@@ -5,25 +5,32 @@ import { Injectable } from '@angular/core';
 })
 export class OroService {
 
-  coso: number = 630;
-
-  restarCoso(cuanto: number){
-    this.coso -= cuanto;
-    console.log('Comprado con ' + cuanto);
-    console.log('Quedan ' + this.coso + ' de coso');
+  oroValidoCompra(oro: number): boolean{
+    return oro > 0;
   }
 
-  sumarCoso(cuanto: number){
-    this.coso += cuanto;
-    console.log('Comprado con ' + cuanto);
-    console.log('Quedan ' + this.coso + ' de coso');
+  oroValidoVenta(oro: number): boolean{
+    return oro >= 0;
   }
 
-  getCoso(){
-    return this.coso;
+  restarOro(oroActual: number, aRestar: number): number{
+    if(this.oroValidoCompra(oroActual) && this.oroValidoCompra(aRestar)){
+      // oroActual -= aRestar;
+      return oroActual - aRestar;
+    } else {
+      return oroActual;
+    }
+  }
+
+  sumarOro(oroActual: number, aRestar: number){
+    if(this.oroValidoVenta(oroActual) && this.oroValidoVenta(aRestar)){
+      return oroActual + aRestar;
+    } else {
+      return oroActual;
+    }
   }
 
   constructor() { 
-    console.log('Servicio de oro ' + this.coso)
+
   }
 }

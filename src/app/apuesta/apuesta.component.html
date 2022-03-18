@@ -4,7 +4,7 @@
     </div>
   
     <div>
-      <button (click)="activar(); onOutputMio()">Activar</button>
+      <button (click)="activar(); onActualizarOro()">Activar</button>
       <button (click)="desactivar()">Desactivar</button>
       <br>
   
@@ -30,7 +30,7 @@
       <button (click)="botonAbajo()"> &#x25BC; </button>
       <br>
   
-      <button (click)="elegir(); onOutputMio()">Elegir</button>
+      <button (click)="elegir(); onActualizarOro()">Elegir</button>
     </div>
   
     <div>
@@ -38,10 +38,8 @@
       <br>
       <span>Deuda: {{ deuda }} </span>
       <br>
-      <span>Coso = {{ coso }}</span>
-      <br>
-      <button (click)="pedirPrestamo();  onOutputMio()">Pedir prestamo (200)</button>
-      <button (click)="pagarDeuda();  onOutputMio()" >Pagar deuda</button>
+      <button (click)="pedirPrestamo();  onActualizarOro()">Pedir prestamo (200)</button>
+      <button (click)="pagarDeuda();  onActualizarOro()" >Pagar deuda</button>
     </div>
     
   </div>

@@ -1,0 +1,71 @@
+ /*.listaFotos{
+    border: 1px solid blue;
+   display: flex;
+    justify-content: center;
+    display: flex;
+    
+}
+
+.contenedorDeFotos {
+    border: 1px solid black;
+    text-align: center;
+    margin-left: -42px;
+}
+
+.listaFotos li{
+    list-style: none;
+    justify-content: center;
+}
+
+img {
+    display: inline-flex;
+}
+
+.foto{
+    width: 500px;
+    margin: 15px;
+}
+
+li button{
+    position: relative;
+}*/
+
+*{
+    background-color: rgb(4, 4, 39);
+}
+
+
+.elementoLista{
+    border: solid black 1px;
+    list-style: none;
+    justify-content: center;
+
+    width: 500px;
+    display: inline-block; 
+    margin: 20px; 
+}
+
+.foto {
+    display: block;
+    width: 500px;
+}
+
+.bloqueado{
+    filter: blur(20px) brightness(150%) contrast(90%) saturate(20%);
+}
+
+/*.divElementoLista{
+     display: flex;
+    justify-content: center;
+    align-items: center; 
+}*/
+
+.pieDeFoto{
+    color: white;
+}
+
+.listaFotos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

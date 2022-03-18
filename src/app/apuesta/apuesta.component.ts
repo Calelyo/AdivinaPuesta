@@ -13,25 +13,18 @@ export class ApuestaComponent {
 
   @Input () oro: number = 0;
 
-
-
   @Output()
-  outputMio = new EventEmitter<number>();
+  emiteOro = new EventEmitter<number>();
 
-  onOutputMio(){
-    this.outputMio.emit(this.oro);
+  onActualizarOro(){
+    this.emiteOro.emit(this.oro);
   }
-
-
-  // oro: number = 0;
-
+ 
   oculto: number = this.numeroAleatorio();
 
   activado: boolean = true;
 
   deuda: number = 0;
-
-  coso: number = this._servicio.getCoso();
 
   numeroAleatorio(): number{
     let aleatorio = Math.round(Math.random()*10);
@@ -45,7 +38,9 @@ export class ApuestaComponent {
 
   activar(): void{
     if(this.activado == false && this.oro >= 200){
-      this.oro -= 200;
+      // this.oro -= 200;
+      this.oro = this._servicio.restarOro(this.oro, 200);
+      
       this.activado = true;
       this.aleatorio = this.numeroAleatorio();
     }
@@ -97,7 +92,7 @@ export class ApuestaComponent {
   }
 
   constructor(private _servicio: OroService){
-    // this.coso = _servicio.getCoso();
+    
   }
   
 }
