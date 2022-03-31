@@ -1,4 +1,6 @@
-<app-apuesta [oro]="oro" (emiteOro)="recibirOro($event)"></app-apuesta>
+<div class="appApuesta">
+    <app-apuesta [oro]="oro" (emiteOro)="recibirOro($event)"></app-apuesta>
+</div>
 <div> Oro para comprar: {{ oro }} </div>
 <button (click)="restarCien()">Comprar (100)</button>
 <button (click)="sumarCien()">Vender (100)</button>

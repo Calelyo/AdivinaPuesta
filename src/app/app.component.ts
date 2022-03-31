@@ -101,12 +101,17 @@ export class AppComponent implements OnInit{
   desbloquearImagen(indice: number): void{
     let imagenesBloqueadas = document.getElementsByClassName('foto')
     let idFoto: number = Number(imagenesBloqueadas[indice].id[6])-1
+    let precioFoto: number = Number(this.fotos[indice].costo)
 
     console.log(idFoto)
-    if(idFoto == indice){
+    console.log(precioFoto)
+    if(idFoto == indice && this.oro >= precioFoto){
       console.log(imagenesBloqueadas[indice])
       console.log(indice)
       imagenesBloqueadas[indice].className = 'foto'
+      this.oro -= precioFoto;
+    } else {
+      alert('Oro insuficiente')
     }
     
     // ¿ARRAY SOBRE 'imagenesBloqueadas O SOBRE this.fotos?'
@@ -115,7 +120,6 @@ export class AppComponent implements OnInit{
     // Array.from(elementoImagen).forEach(function (elemento) {
     //   console.log(elemento)
     // });
-    
     
   }
   

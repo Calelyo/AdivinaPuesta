@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+/* https://projects.verou.me/css3patterns */
+body{
+    background: linear-gradient(130deg, rgb(167 84 135) 1%, rgb(104, 23, 73) 23%, rgb(155, 96, 132) );
+}
+/*
+h1{
+    font-variant: small-caps;
+}
+*/

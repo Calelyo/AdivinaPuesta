@@ -30,7 +30,7 @@ export class FotosService {
   }[] = 
       [
         {id: 1, link: "assets/img/0.jpg", nombre: "La Planta", descripcion: "descripcion1", costo: 100, comprado: false},
-        {id: 2, link: "assets/img/1.jpg", nombre: "Pinturas", descripcion: "descripcion2", costo: 100, comprado: false},
+        {id: 2, link: "assets/img/1.jpg", nombre: "Pinturas", descripcion: "descripcion2", costo: 150, comprado: false},
         {id: 3, link: "assets/img/2.jpg", nombre: "Fueguito", descripcion: "descripcion3", costo: 100, comprado: false},
         {id: 4, link: "assets/img/3.jpg", nombre: "De Espaldas", descripcion: "descripcion4", costo: 100, comprado: false},
         {id: 5, link: "assets/img/4.jpg", nombre: "La Mano", descripcion: "descripcion5", costo: 100, comprado: false},

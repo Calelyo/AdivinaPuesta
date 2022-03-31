@@ -1,18 +1,18 @@
 <div class="appCSS">
     <div>
-      <h1>AdivinApuesta</h1>
+      <h1 class="centrar">AdivinApuesta</h1>
     </div>
   
-    <div>
-      <button (click)="activar(); onActualizarOro()">Activar</button>
-      <button (click)="desactivar()">Desactivar</button>
+    <div class="botonesAyD centrar">
+      <button class="botonesArAbE" (click)="activar(); onActualizarOro()">Activar</button>
+      <button class="botonesArAbE" (click)="desactivar()">Desactivar</button>
       <br>
-  
-      <span>Activar cuesta 200 de oro y genera un nuevo numero oculto.</span>
-      <br>
-  
-      <span>Estado: {{ activado }} </span>
     </div>
+  
+    
+    <span>Activar cuesta 200 de oro y genera un nuevo numero oculto.</span>
+    <br>
+    <span>Estado: {{ activado }} </span>
   
     <div>
       Oculto: <span *ngIf="this.activado == false"> {{ oculto }} </span>
@@ -20,17 +20,17 @@
   
     <div>
       <!-- Codigo de flecha arriba -->
-      <button (click)="botonArriba()"> &#x25B2; </button>
+      <button class="botonesArAbE" (click)="botonArriba()"> &#x25B2; </button>
       <br>
   
-      <span>{{ aleatorio }}</span>
+      <span class="centrar numAleatorio">{{ aleatorio }}</span>
       <br>
       
       <!-- Codigo de flecha abajo -->
-      <button (click)="botonAbajo()"> &#x25BC; </button>
+      <button class="botonesArAbE centrar" (click)="botonAbajo()"> &#x25BC; </button>
       <br>
   
-      <button (click)="elegir(); onActualizarOro()">Elegir</button>
+      <button class="botonesArAbE" (click)="elegir(); onActualizarOro()">Elegir</button>
     </div>
   
     <div>
