@@ -1,28 +1,38 @@
-<div class="appApuesta">
-    <app-apuesta [oro]="oro" (emiteOro)="recibirOro($event)"></app-apuesta>
-</div>
-<div> Oro para comprar: {{ oro }} </div>
-<button (click)="restarCien()">Comprar (100)</button>
-<button (click)="sumarCien()">Vender (100)</button>
-<!-- <button (click)="mostrarFotos()">Mostrar Fotos</button> -->
-<!-- <ul #asListaFotos class="listaFotos"></ul> -->
-<!-- <span (click)="desbloquearImagen()"></span> -->
-<!-- <img src="assets/img/0.jpg" alt=""> -->
-<ul>
-    <div class="contenedorDeFotos">
+<body>
 
-        <li class="elementoLista" *ngFor="let foto of fotos; let indice = index">
+    <div id="apuesta" class="appApuesta" (wheel)="IrATienda()">
+        <app-apuesta [oro]="oro" (emiteOro)="recibirOro($event)"></app-apuesta>
+    <!-- <div class="abajo"><a href="#tienda">abajo</a></div> -->
+    </div>
 
-            <div class="elementoLista claseIDN">
-                
-                <img id="idFoto{{foto.id}}" class="foto bloqueado" src={{foto.link}} alt="{{foto.nombre}}">
-                <span class="nombreFoto pieDeFoto"> {{ foto.nombre }} </span>
-                <button class="botonDetalles pieDeFoto">Detalles</button>
-                <button class="botonComprar pieDeFoto" (click)="desbloquearImagen(indice)">Comprar</button>
+    <div class="tienda">
+        <!-- <div class="arriba"><a href="#apuesta">arriba</a></div> -->
+        <h1 id="tienda">Tienda</h1>
+        <div> Oro para comprar: {{ oro }} </div>
+        <button (click)="restarCien()">Comprar (100)</button>
+        <button (click)="sumarCien()">Vender (100)</button>
+        <!-- <button (click)="mostrarFotos()">Mostrar Fotos</button> -->
+        <!-- <ul #asListaFotos class="listaFotos"></ul> -->
+        <!-- <span (click)="desbloquearImagen()"></span> -->
+        <!-- <img src="assets/img/0.jpg" alt=""> -->
+        <ul>
+            <div class="contenedorDeFotos">
+
+                <li class="elementoLista" *ngFor="let foto of fotos; let indice = index">
+
+                    <div class="elementoLista claseIDN">
+                        
+                        <img id="idFoto{{foto.id}}" class="foto bloqueado" src={{foto.link}} alt="{{foto.nombre}}">
+                        <span class="nombreFoto pieDeFoto"> {{ foto.nombre }} </span>
+                        <button class="botonDetalles pieDeFoto">Detalles</button>
+                        <button class="botonComprar pieDeFoto" (click)="desbloquearImagen(indice)">Comprar</button>
+
+                    </div>
+
+                </li>
 
             </div>
-
-        </li>
-
+        </ul>
     </div>
-</ul>
+
+</body>

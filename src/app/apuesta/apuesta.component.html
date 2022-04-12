@@ -1,16 +1,16 @@
+<div>
+  <h1 class="centrar">AdivinApuesta</h1>
+</div>
+
 <div class="appCSS">
-    <div>
-      <h1 class="centrar">AdivinApuesta</h1>
-    </div>
-  
     <div class="botonesAyD centrar">
-      <button class="botonesArAbE" (click)="activar(); onActualizarOro()">Activar</button>
-      <button class="botonesArAbE" (click)="desactivar()">Desactivar</button>
+      <button class="botones botonActivar" (click)="activar(); onActualizarOro()">Activar</button>
+      <!-- <button class="botonesArAbE" (click)="desactivar()">Desactivar</button> -->
       <br>
     </div>
   
     
-    <span>Activar cuesta 200 de oro y genera un nuevo numero oculto.</span>
+    <span>Activar cuesta <span style="color: yellow;"> 200 </span> de <span style="color: rgb(221, 221, 85);"> oro </span> y genera un nuevo numero oculto.</span>
     <br>
     <span>Estado: {{ activado }} </span>
   
@@ -20,17 +20,17 @@
   
     <div>
       <!-- Codigo de flecha arriba -->
-      <button class="botonesArAbE" (click)="botonArriba()"> &#x25B2; </button>
+      <button class="botones botonesArAbE" (click)="botonArriba()"> &#x25B2; </button>
       <br>
   
       <span class="centrar numAleatorio">{{ aleatorio }}</span>
       <br>
       
       <!-- Codigo de flecha abajo -->
-      <button class="botonesArAbE centrar" (click)="botonAbajo()"> &#x25BC; </button>
+      <button class="botones botonesArAbE centrar" (click)="botonAbajo()"> &#x25BC; </button>
       <br>
   
-      <button class="botonesArAbE" (click)="elegir(); onActualizarOro()">Elegir</button>
+      <button class="botones botonesArAbE" (click)="elegir(); onActualizarOro()">Elegir</button>
     </div>
   
     <div>
@@ -38,8 +38,8 @@
       <br>
       <span>Deuda: {{ deuda }} </span>
       <br>
-      <button (click)="pedirPrestamo();  onActualizarOro()">Pedir prestamo (200)</button>
-      <button (click)="pagarDeuda();  onActualizarOro()" >Pagar deuda</button>
+      <button class="botones" (click)="pedirPrestamo();  onActualizarOro()">Pedir prestamo (200)</button>
+      <button class="botones" (click)="pagarDeuda();  onActualizarOro()" >Pagar deuda</button>
     </div>
     
   </div>

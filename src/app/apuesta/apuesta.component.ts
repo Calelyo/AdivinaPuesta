@@ -42,7 +42,7 @@ export class ApuestaComponent {
       this.oro = this._servicio.restarOro(this.oro, 200);
       
       this.activado = true;
-      this.aleatorio = this.numeroAleatorio();
+      this.oculto = this.numeroAleatorio();
     }
   }
 

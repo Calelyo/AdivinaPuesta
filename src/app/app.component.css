@@ -40,10 +40,30 @@ li button{
 body{
     margin: 0;
     padding: 0;
+    background: linear-gradient(171deg, rgb(167 84 135) -80%, rgb(122 33 88), rgb(192, 158, 179) );
+}
+
+.tienda{
+    background: linear-gradient(171deg, rgb(192, 158, 179) 20%, rgb(89, 26, 105), rgb(44, 27, 105) );
+}
+
+.abajo{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 1%;
+    width: 100%;
+}
+
+.arriba{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 10%;
+    width: 100%;
 }
 
 .appApuesta{
-    border: solid;
     margin: 0;
     padding: 0;
     display: flex;

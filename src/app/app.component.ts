@@ -102,16 +102,19 @@ export class AppComponent implements OnInit{
     let imagenesBloqueadas = document.getElementsByClassName('foto')
     let idFoto: number = Number(imagenesBloqueadas[indice].id[6])-1
     let precioFoto: number = Number(this.fotos[indice].costo)
+    let comprada: boolean = Boolean(this.fotos[indice].comprado)
 
     console.log(idFoto)
     console.log(precioFoto)
-    if(idFoto == indice && this.oro >= precioFoto){
+    if(idFoto == indice && this.oro >= precioFoto && comprada == false){
       console.log(imagenesBloqueadas[indice])
       console.log(indice)
       imagenesBloqueadas[indice].className = 'foto'
+      comprada = true;
+      this.fotos[indice].comprado = comprada
       this.oro -= precioFoto;
     } else {
-      alert('Oro insuficiente')
+      alert('NO SE PUEDE COMPRAR')
     }
     
     // ¿ARRAY SOBRE 'imagenesBloqueadas O SOBRE this.fotos?'
@@ -122,7 +125,16 @@ export class AppComponent implements OnInit{
     // });
     
   }
+
+
+  IrATienda(): void{
+    let y = document.documentElement.scrollTop + 1
+    if(y > 0){
+      console.log("y: " + y)
+    }
+  }
   
+
   constructor(private Renderer2: Renderer2, private _servicioOro:OroService, private _servicioFotos:FotosService) {
 
   }
