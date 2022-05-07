@@ -43,6 +43,7 @@ export class ApuestaComponent {
       
       this.activado = true;
       this.oculto = this.numeroAleatorio();
+      this.aleatorio = this.numeroAleatorio();
     }
   }
 

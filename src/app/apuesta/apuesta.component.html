@@ -2,9 +2,12 @@
   <h1 class="centrar">AdivinApuesta</h1>
 </div>
 
-<div class="appCSS">
+<div [ngClass]="this.activado == true ? 'appCSSactivado' : 'appCSSdesactivado'" class="">
     <div class="botonesAyD centrar">
-      <button class="botones botonActivar" (click)="activar(); onActualizarOro()">Activar</button>
+      <!--
+      <button [ngClass]="this.activado == true ? 'botonesActivado botonActivar' : 'botonesDesctivado botonActivar'" class="" (click)="activar(); onActualizarOro()">Activar</button>
+        -->
+        <button class="botonesActivado" (click)="activar(); onActualizarOro()">Activar</button>
       <!-- <button class="botonesArAbE" (click)="desactivar()">Desactivar</button> -->
       <br>
     </div>
@@ -20,26 +23,36 @@
   
     <div>
       <!-- Codigo de flecha arriba -->
-      <button class="botones botonesArAbE" (click)="botonArriba()"> &#x25B2; </button>
+      <button [ngClass]="this.activado == true ? 'botonesActivado botonesArAbE centrar' : 'botonesDesctivado centrar'" class="" (click)="botonArriba()"> &#x25B2; </button>
       <br>
   
       <span class="centrar numAleatorio">{{ aleatorio }}</span>
       <br>
       
       <!-- Codigo de flecha abajo -->
-      <button class="botones botonesArAbE centrar" (click)="botonAbajo()"> &#x25BC; </button>
+      <button [ngClass]="this.activado == true ? 'botonesActivado botonesArAbE centrar' : 'botonesDesctivado centrar'" class="" (click)="botonAbajo()"> &#x25BC; </button>
       <br>
   
-      <button class="botones botonesArAbE" (click)="elegir(); onActualizarOro()">Elegir</button>
+      <button [ngClass]="this.activado == true ? 'botonesActivado botonesArAbE' : 'botonesDesctivado'" class="" (click)="elegir(); onActualizarOro()">Elegir</button>
     </div>
   
     <div>
-      <span>Oro: {{ oro }}</span>
+      <span style="color: rgb(221, 221, 85);">Oro: {{ oro }}</span>
       <br>
-      <span>Deuda: {{ deuda }} </span>
+      <span style="color: rgb(151 0 0);">Deuda: {{ deuda }} </span>
       <br>
-      <button class="botones" (click)="pedirPrestamo();  onActualizarOro()">Pedir prestamo (200)</button>
-      <button class="botones" (click)="pagarDeuda();  onActualizarOro()" >Pagar deuda</button>
+      <!--
+      <button [ngClass]="this.activado == true ? 'botonesActivado' : 'botonesDesctivado botonesPP'" class="" (click)="pedirPrestamo();  onActualizarOro()">Pedir prestamo (200)</button>
+      <button [ngClass]="this.activado == true ? 'botonesActivado' : 'botonesDesctivado botonesPP'" class="" (click)="pagarDeuda();  onActualizarOro()" >Pagar deuda</button>
+        -->
+      <button class="botonesActivado botonesPP" (click)="pedirPrestamo();  onActualizarOro()">Pedir prestamo (200)</button>
+      <button class="botonesActivado botonesPP" (click)="pagarDeuda();  onActualizarOro()" >Pagar deuda</button>
+ 
     </div>
     
+  </div>
+
+  <div class="abajoTienda">
+    <div class="tienda"> Tienda</div>
+    <div class="flecha"> &#x25BC; </div>
   </div>
